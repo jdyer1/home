@@ -1,14 +1,18 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export default function Counter() {
-  const [count, setCount] = useState<number>(() => {
+
+  const [count, setCount] = useState<number>(0);
+
+  useEffect(() => {
     if (typeof window !== "undefined") {
       const stored = window.localStorage.getItem("count");
-      return stored !== null ? Number(stored) : 0;
+      if (stored !== null) {
+        setCount(Number(stored));
+      }
     }
-    return 0;
-  });
+  }, []);
 
   const handleClick = () => {
     setCount((c) => {
@@ -21,11 +25,19 @@ export default function Counter() {
   };
 
   return (
-    <>
-      <button id="counter-button" onClick={handleClick} className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600">
-        count
-      </button>
-      <span id="counter-value" className="count-value">{count}</span>
-    </>
+    <button
+      id="counter-button"
+      onClick={handleClick}
+      className="flex items-center justify-center bg-gray-200 text-gray-700 rounded shadow font-cousine text-xl transition-all duration-200 border border-gray-400 select-none"
+      style={{
+        minWidth: '2.5rem',
+        minHeight: '2.5rem',
+        padding: '0.5rem',
+        width: count === 0 ? '2.5rem' : 'auto',
+        height: '2.5rem',
+      }}
+    >
+      {count === 0 ? '#' : count}
+    </button>
   );
 }

@@ -18,20 +18,25 @@ describe('Counter Component', () => {
   it('increments counter and persists after reload', async (): Promise<void> => {
     await page.goto(APP_URL);
     await page.waitForSelector('#counter-button');
+
+    // Initial state: button shows '#'
+    let btnText: string | null = await page.$eval('#counter-button', (el: Element) => el.textContent);
+    expect(btnText).toBe('#');
+
+    // Click: button shows '1'
     await page.click('#counter-button');
-    await page.waitForSelector('#counter-value');
-    let value: string | null = await page.$eval('#counter-value', (el: Element) => el.textContent);
-    expect(value).toBe('1');
+    btnText = await page.$eval('#counter-button', (el: Element) => el.textContent);
+    expect(btnText).toBe('1');
 
     // Reload and check persistence
     await page.reload({ waitUntil: ['networkidle0', 'domcontentloaded'] });
-    await page.waitForSelector('#counter-value');
-    value = await page.$eval('#counter-value', (el: Element) => el.textContent);
-    expect(value).toBe('1');
+    await page.waitForSelector('#counter-button');
+    btnText = await page.$eval('#counter-button', (el: Element) => el.textContent);
+    expect(btnText).toBe('1');
 
-    // Click again
+    // Click again: button shows '2'
     await page.click('#counter-button');
-    value = await page.$eval('#counter-value', (el: Element) => el.textContent);
-    expect(value).toBe('2');
+    btnText = await page.$eval('#counter-button', (el: Element) => el.textContent);
+    expect(btnText).toBe('2');
   });
 });
