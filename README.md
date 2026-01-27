@@ -1,17 +1,23 @@
-This is a [Next.js](https://nextjs.org) project.
+# Project Setup
 
-## Getting Started
+After cloning this repository, follow these steps to set up your development environment:
 
-First, run the development server:
+### Install dependencies
+
+Using npm:
+```bash
+npm install
+```
+
+### Start the development server
 
 ```bash
 npm run dev
 ```
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-## Running Tests
+### Open the app
 
-This project uses Jest and Puppeteer for end-to-end browser testing.
+Visit [http://localhost:3000](http://localhost:3000) in your browser.
 
 ### Run the test suite
 
@@ -20,7 +26,6 @@ The test suite will automatically start and stop the Next.js dev server as neede
 ```bash
 npx jest
 ```
-
 or to run a specific test file:
 
 ```bash
