@@ -1,8 +1,9 @@
 # Agents Guidelines
 
 - Use TypeScript strict mode for all code.
+- Provide types where they cannot be inferred
 
 # style guidelines
-- No inline styles
+- Use tailwind primitives for all styles
 
 

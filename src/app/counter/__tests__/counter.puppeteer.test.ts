@@ -1,10 +1,8 @@
-
 import puppeteer, { Browser, Page } from 'puppeteer';
 
+const APP_URL = 'http://localhost:3000/counter';
 
-const APP_URL = 'http://localhost:3000';
-
-describe('Counter Page', () => {
+describe('Counter Component', () => {
   let browser: Browser;
   let page: Page;
 
