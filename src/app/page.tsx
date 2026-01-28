@@ -8,7 +8,11 @@ export default function Home() {
   useEffect(() => {
     fetch("/asciidoc/root.html")
       .then((res) => res.text())
-      .then(setHtml);
+      .then((rawHtml) => {
+        // Extract <body>...</body> content only
+        const match = rawHtml.match(/<body[^>]*>([\s\S]*?)<\/body>/i);
+        setHtml(match ? match[1] : rawHtml);
+      });
   }, []);
 
   useEffect(() => {
