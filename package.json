@@ -7,12 +7,11 @@
     "dev:next": "next dev",
     "dev:asciidoc": "node scripts/watch-asciidoc.js",
     "build:asciidoc": "rm -rf public/asciidoc && node scripts/build-asciidoc.js",
-    "build:menu": "npx ts-node scripts/generate-menu-data.ts",
     "prebuild": "rm -rf .next public/asciidoc",
-    "build": "npm run build:menu && npm run build:asciidoc && next build",
+    "build": "npm run build:asciidoc && next build",
     "start": "next start",
     "lint": "eslint",
-    "export": "npm run build:menu && npm run build:asciidoc && next export",
+    "export": "npm run build:asciidoc && next export",
     "test": "jest"
   },
   "dependencies": {

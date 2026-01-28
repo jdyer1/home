@@ -1,0 +1,20 @@
+[
+  {
+    "name": "Theology",
+    "icon": "cross",
+    "order": 1,
+    "folder": "Theology"
+  },
+  {
+    "name": "Search Engines",
+    "icon": "magnifying-glass",
+    "order": 2,
+    "folder": "Search Engines"
+  },
+  {
+    "name": "Music",
+    "icon": "music",
+    "order": 3,
+    "folder": "Music"
+  }
+]
