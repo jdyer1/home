@@ -1,0 +1,11 @@
+{
+  "articles": [
+    {
+      "file": "root.adoc",
+      "htmlFile": "root.html",
+      "title": "root",
+      "mtime": 1769642659293
+    }
+  ],
+  "sort": "lex"
+}
