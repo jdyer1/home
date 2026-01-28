@@ -1,4 +1,4 @@
-import puppeteer, { Browser, Page } from 'puppeteer';
+import puppeteer, { Browser, Page } from '../../../../jest.puppeteer-patch.js';
 
 const APP_URL = 'http://localhost:3000/counter';
 
