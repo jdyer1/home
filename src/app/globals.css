@@ -2,61 +2,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Cousine:wght@400;700&display=swap');
 @import "tailwindcss";
 
-.asciidoc-content a {
-	color: #1a1a1a;
-	text-decoration: underline;
-	font-weight: 500;
-	transition: color 0.2s;
-}
-.asciidoc-content a:hover {
-	color: #4b5563;
-}
-
 body {
 	font-family: 'Cousine', monospace;
-}
-
-/* AsciiDoc content styles */
-.asciidoc-content {
-	font-family: 'Cousine', monospace;
-}
-.asciidoc-content h1,
-.asciidoc-content h2,
-.asciidoc-content h3,
-.asciidoc-content h4,
-.asciidoc-content h5,
-.asciidoc-content h6 {
-	font-family: 'Cousine', monospace;
-	color: #222;
-	margin-top: 2.5rem;
-	margin-bottom: 1rem;
-	font-weight: 700;
-	letter-spacing: 0.01em;
-}
-.asciidoc-content h1 {
-	font-size: 2.25rem;
-	border-bottom: 2px solid #e5e7eb;
-	padding-bottom: 0.5rem;
-}
-.asciidoc-content h2 {
-	font-size: 1.5rem;
-	border-bottom: 1px solid #e5e7eb;
-	padding-bottom: 0.25rem;
-}
-.asciidoc-content h3 {
-	font-size: 1.25rem;
-}
-.asciidoc-content p {
-	margin-top: 1.25rem;
-	margin-bottom: 1.25rem;
-	color: #333;
-}
-.asciidoc-content ul,
-.asciidoc-content ol {
-	margin-top: 1.25rem;
-	margin-bottom: 1.25rem;
-	padding-left: 2rem;
-}
-.asciidoc-content li {
-	margin-bottom: 0.5rem;
 }
