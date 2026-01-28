@@ -1,6 +1,7 @@
 "use client";
 import "./globals.css";
 import Counter from "./counter";
+import { Menu } from "./Menu";
 import { ReactNode } from "react";
 
 interface RootLayoutProps {
@@ -11,6 +12,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en">
       <body className="flex flex-col min-h-screen font-cousine bg-white">
+        <Menu />
         <header className="w-full h-12 border-b border-gray-300 bg-gray-50 fixed top-0 left-0 z-50 flex items-center" style={{ fontFamily: 'Cousine, monospace' }}>
           <div className="absolute right-4">
             <Counter />

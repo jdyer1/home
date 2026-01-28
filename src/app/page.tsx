@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 import parse from "html-react-parser";
+import { Menu } from "./Menu";
 
 export default function Home() {
   const [html, setHtml] = useState("");
@@ -32,8 +33,11 @@ export default function Home() {
   }, [html]);
 
   return (
-    <main className="bg-gray-50 p-4 max-w-3xl mx-auto">
-      <div className="asciidoc-content">{html ? parse(html) : null}</div>
-    </main>
+    <div className="relative">
+      <Menu />
+      <main className="bg-gray-50 p-4 max-w-3xl mx-auto">
+        <div className="asciidoc-content">{html ? parse(html) : null}</div>
+      </main>
+    </div>
   );
 }
