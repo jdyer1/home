@@ -28,7 +28,7 @@ export default function Home() {
 
   return (
     <main className="bg-gray-50 p-4 max-w-3xl mx-auto">
-      <div className="asciidoc-content" dangerouslySetInnerHTML={{ __html: html }} />
+      <div className="asciidoc-content" />
     </main>
   );
 }
