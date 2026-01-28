@@ -12,6 +12,7 @@
     "start": "next start",
     "lint": "eslint",
     "export": "npm run build:asciidoc && next export"
+    ,"test": "jest"
   },
   "dependencies": {
     "asciidoctor": "^3.0.4",
