@@ -4,6 +4,7 @@
 - Provide types where they cannot be inferred
 - do not rely on cdn's
 - all features must work with github pages
+- always protect agains XSS attacks
 
 # Test Guidelines
 - always use test driven development.

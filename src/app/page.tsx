@@ -6,7 +6,7 @@ export default function Home() {
   const [html, setHtml] = useState("");
 
   useEffect(() => {
-    fetch("/asciidoc/root.html")
+    fetch("asciidoc/root.html")
       .then((res) => res.text())
       .then((rawHtml) => {
         // Extract <body>...</body> content only
