@@ -2,7 +2,7 @@
 import React, { useState, useRef } from 'react';
 import menuData from './menu-data.json';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { library } from '@fortawesome/fontawesome-svg-core';
+import { library, IconName } from '@fortawesome/fontawesome-svg-core';
 import { fas } from '@fortawesome/free-solid-svg-icons';
 import '@fortawesome/fontawesome-svg-core/styles.css';
 
@@ -30,22 +30,30 @@ export const Menu: React.FC = () => {
     timeoutRef.current = setTimeout(() => setExpanded(null), 1000);
   };
 
+  const handleClick = (folder: string) => {
+    window.location.hash = `#/${encodeURIComponent(folder)}`;
+  };
+
   return (
     <nav
-      className="fixed left-0 top-0 h-full z-50 flex flex-col items-center bg-gray-900 text-gray-100 py-4 font-cousine"
+      className="fixed left-0 top-0 h-full z-50 flex flex-col items-center bg-gray-50 text-black py-4 font-cousine mt-12"
       style={{ fontFamily: 'Cousine, monospace' }}
       aria-label="Main menu"
     >
       {menuData.map((item: MenuItem, idx: number) => (
         <div
           key={item.folder}
-          className="relative mb-6 group"
+          className="relative mb-6 group cursor-pointer"
           onMouseEnter={() => handleMouseEnter(idx)}
           onMouseLeave={handleMouseLeave}
+          onClick={() => handleClick(item.folder)}
+          aria-label={`Open ${safeText(item.name)} section`}
+          tabIndex={0}
+          role="button"
         >
           <FontAwesomeIcon
-            icon={["fas", item.icon]}
-            className="transition-transform duration-200 text-2xl group-hover:scale-110"
+            icon={["fas", item.icon as IconName]}
+            className="transition-transform duration-200 text-2xl group-hover:scale-110 text-black"
             title={safeText(item.name)}
           />
           {expanded === idx && (

@@ -1,0 +1,6 @@
+= Improving Relevancy with LLMs
+
+Today's Search Engines are becoming Vector Databases.  And
+today's Vector Databases are becoming Search Engines!  All this
+in the name of improving search relevancy using LLM's.  It is
+an exciting time to be in the search business.

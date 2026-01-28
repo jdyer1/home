@@ -1,0 +1,5 @@
+= Traditional Relevancy Techniques
+
+I work with search engines as part of my job.  
+I could possibly someday write about traditional techniques used to
+improve search relevancy!

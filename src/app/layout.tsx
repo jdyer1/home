@@ -3,6 +3,8 @@ import "./globals.css";
 import Counter from "./counter";
 import { Menu } from "./Menu";
 import { ReactNode } from "react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faHouse } from '@fortawesome/free-solid-svg-icons';
 
 interface RootLayoutProps {
   children: ReactNode;
@@ -13,7 +15,20 @@ export default function RootLayout({ children }: RootLayoutProps) {
     <html lang="en">
       <body className="flex flex-col min-h-screen font-cousine bg-white">
         <Menu />
-        <header className="w-full h-12 border-b border-gray-300 bg-gray-50 fixed top-0 left-0 z-50 flex items-center" style={{ fontFamily: 'Cousine, monospace' }}>
+        <header className="w-full h-12 border-b border-gray-300 bg-gray-50 fixed top-0 left-0 z-50 flex items-center justify-between" style={{ fontFamily: 'Cousine, monospace' }}>
+          <div className="flex items-center h-full ml-0">
+            <button
+              aria-label="Home"
+              className="focus:outline-none m-0 p-0 flex items-center justify-center"
+              style={{ background: 'none', border: 'none', cursor: 'pointer', width: '48px', height: '48px' }}
+              onClick={() => { window.location.hash = ''; }}
+            >
+              <FontAwesomeIcon icon={faHouse} className="text-2xl text-black" />
+            </button>
+            <span className="ml-2 text-2xl font-cousine text-gray-800 select-none" style={{ lineHeight: '2.25rem' }}>
+              James Dyer - my github page
+            </span>
+          </div>
           <div className="absolute right-4">
             <Counter />
           </div>
