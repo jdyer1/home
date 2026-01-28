@@ -1,5 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
+import parse from "html-react-parser";
 
 export default function Home() {
   const [html, setHtml] = useState("");
@@ -28,7 +29,7 @@ export default function Home() {
 
   return (
     <main className="bg-gray-50 p-4 max-w-3xl mx-auto">
-      <div className="asciidoc-content" />
+      <div className="asciidoc-content">{html ? parse(html) : null}</div>
     </main>
   );
 }
