@@ -1,0 +1,9 @@
+- follow the top-level agents.md, except where this file contradicts.
+- This is a mock pizza restaurant ordering site.  It is not real.
+- This must deploy on github pages and run fully in the user's browser.
+- There are no server dependencies.  The only exception is we may use freely-available public web services that require no authentication from a browser client, but only where clearly advantageous.
+- Use react, nextjs and tailwind.
+- Keep additional dependencies to a minimum.  Clearly justify any new dependency.
+- Obey the single responsibility principle.
+- Use test-driven development.
+- Make code units easily swappable with new implementations.
