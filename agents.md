@@ -9,8 +9,6 @@
 # Test Guidelines
 - always use test driven development.
 - always update the tests when making changes.
-- use fast unit tests for non-ui components
-- use headless browser tests (puppeteer; chrome only) for ui components
 
 # style guidelines
 - Use tailwind primitives for all styles
